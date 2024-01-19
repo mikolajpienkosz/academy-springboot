@@ -11,9 +11,9 @@ class PriestDataInitializer {
 
     @PostConstruct
     void initPriests(){
-        PriestDao priestDao = new PriestDao("Karol Wojtyła", 178L, 85L);
-        PriestDao priestDao1 = new PriestDao("Stefan Wyszyński", 177L, 80L);
-        PriestDao priestDao2 = new PriestDao("Tadeusz Rydzyk", 150L, 78L);
+        PriestDao priestDao = new PriestDao("Karol", 178L, 85L);
+        PriestDao priestDao1 = new PriestDao("Stefan", 177L, 80L);
+        PriestDao priestDao2 = new PriestDao("Tadeusz", 151L, 78L);
 
         priestService.addPriest(priestDao);
         priestService.addPriest(priestDao1);
