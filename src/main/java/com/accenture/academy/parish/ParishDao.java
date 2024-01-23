@@ -25,10 +25,10 @@ public class ParishDao {
     PriestDao priestDao;
     @OneToOne
     ChurchDao churchDao;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "parish_id")
     private Set<MemberDao> members;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private CemeteryDao cemeteryDao;
 
     public ParishDao(String parishName, PriestDao priestDao, ChurchDao churchDao, Set<MemberDao> members, CemeteryDao cemeteryDao) {

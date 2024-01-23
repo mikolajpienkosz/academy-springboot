@@ -24,7 +24,23 @@ public class ParishService {
         parishRepository.saveParish(parishDao);
     }
 
+    public void addParish(ParishDao parishDao) {
+        parishRepository.saveParish(parishDao);
+    }
+
     public List<ParishDao> getAllParishes() {
         return parishRepository.findAllParishes();
+    }
+
+    public void assignPriestToParish(PriestAssignmentDto priestAssignmentDto, Long parishId) {
+        ParishDao parishDao = getById(parishId);
+        PriestDao priestDao = priestService.getPriestById(priestAssignmentDto.getPriestId());
+
+        parishDao.setPriestDao(priestDao);
+        parishRepository.saveParish(parishDao);
+    }
+
+    ParishDao getById(Long id){
+        return parishRepository.findById(id).orElseThrow(() -> new RuntimeException("Parish with id "+ id+" doesn't exist"));
     }
 }

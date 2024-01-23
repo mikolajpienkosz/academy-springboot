@@ -20,4 +20,9 @@ public class ParishRestController {
     void addParish(@RequestBody ParishDto parishDto){
         parishService.addParish(parishDto);
     }
+
+    @PatchMapping("/{parishId}")
+    void assignPriestToParish(@RequestBody PriestAssignmentDto priestAssignmentDto, @PathVariable Long parishId){
+        parishService.assignPriestToParish(priestAssignmentDto, parishId);
+    }
 }

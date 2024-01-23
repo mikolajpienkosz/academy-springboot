@@ -16,7 +16,7 @@ public class ChurchService {
         return churchRepository.findAll();
     }
 
-    void addChurch(ChurchDao churchDao){
+    public void addChurch(ChurchDao churchDao){
         churchRepository.save(churchDao);
     }
     void addChurchDto(ChurchDto churchDto){

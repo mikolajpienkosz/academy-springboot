@@ -21,7 +21,7 @@ public class PriestService {
         );
     }
 
-    void addPriest(PriestDao priestDao){
+    public void addPriest(PriestDao priestDao){
         priestRepository.save(priestDao);
     }
 

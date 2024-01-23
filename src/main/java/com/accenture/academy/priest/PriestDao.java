@@ -14,9 +14,12 @@ public class PriestDao {
     private Long id;
     private String name;
     private Long height;
+    @Transient
     private Long age;
 
-    PriestDao(String name, Long height, Long age) {
+    Location location;
+
+    public PriestDao(String name, Long height, Long age) {
         this.name = name;
         this.height = height;
         this.age = age;

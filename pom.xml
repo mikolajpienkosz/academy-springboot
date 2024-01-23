@@ -53,6 +53,12 @@
             <artifactId>hibernate-validator</artifactId>
             <version>8.0.1.Final</version> <!--dostępna może być nowsza wersja-->
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

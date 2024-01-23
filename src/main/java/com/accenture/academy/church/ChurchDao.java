@@ -18,7 +18,7 @@ public class ChurchDao {
     private Integer numberOfMembers;
     private Double budget;
 
-    ChurchDao(String name, String nameOfCity, Integer numberOfSeats, Integer numberOfMembers, Double budget) {
+    public ChurchDao(String name, String nameOfCity, Integer numberOfSeats, Integer numberOfMembers, Double budget) {
         this.name = name;
         this.nameOfCity = nameOfCity;
         this.numberOfSeats = numberOfSeats;
